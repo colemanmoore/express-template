@@ -19,7 +19,7 @@ app.use('/static', express.static(path.join(__dirname, '../dist')));
 // Inject live reload in development mode
 if (env === 'development') {
   app.use(require('connect-livereload')({
-    port: 12345
+    port: process.env.LR_PORT
   }));
 }
 

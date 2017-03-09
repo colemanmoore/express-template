@@ -86,5 +86,6 @@ gulp.task('serve:dev', ['build'], function() {
 });
 
 gulp.task('serve:prod', ['build'], function() {
-
+  var server = gls('app/server.js');
+  server.start();
 });
